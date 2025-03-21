@@ -7,7 +7,6 @@ import atexit
 import time
 import itertools
 
-
 cache_toner = {}  # Dicionário para armazenar os dados do toner temporariamente
 cache_timeout = 300  # Tempo de expiração do cache em segundos (5 minutos)
 
@@ -137,7 +136,6 @@ impressoras = {
     "RICOH RADIOLOGIA": {"ip": "172.16.30.88", "colorida": True},
 }
 
-
 # Configuração da interface
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("blue")
@@ -266,7 +264,6 @@ for index, (nome, dados) in enumerate(sorted(impressoras.items())):
     # Adicionando eventos do letreiro
     botao_nome.bind("<Enter>", lambda event, w=botao_nome, t=texto_botao: iniciar_letreiro(w, t))
     botao_nome.bind("<Leave>", lambda event, w=botao_nome, t=texto_botao: parar_letreiro(w, t))
-
 
     labels[nome] = {}
     
